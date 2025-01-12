@@ -1,0 +1,33 @@
+name: Test Student Repository
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout student repository
+      uses: actions/checkout@v3
+
+    - name: Set up environment
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y build-essential gcc
+
+    - name: Clone test framework
+      run: |
+        git clone https://github.com/<votre_nom_utilisateur>/rihen-test-script.git tests-framework
+        cp -r tests-framework/rihen-low_level_programming/* .
+
+    - name: Run tests
+      run: |
+        for script in $(find 0x00-hello_world/tests -name "*-test.sh"); do
+          bash $script
+        done
