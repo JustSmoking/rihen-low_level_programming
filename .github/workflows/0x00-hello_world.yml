@@ -23,11 +23,11 @@ jobs:
 
     - name: Clone test framework
       run: |
-        git clone https://github.com/<votre_nom_utilisateur>/rihen-test-script.git tests-framework
+        git clone https://github.com/LeTeguis/rihen-test-script.git tests-framework
         cp -r tests-framework/rihen-low_level_programming/* .
 
     - name: Run tests
       run: |
-        for script in $(find 0x00-hello_world/tests -name "*-test.sh"); do
+        for script in $(find tests/0x00-hello_world -name "*-test.sh"); do
           bash $script
         done
