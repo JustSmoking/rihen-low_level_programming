@@ -1,17 +1,17 @@
 #include "main.h"
 #include <stdio.h>
 
-int _abs(int c)
+int main()
 {
-    if (c < 0)
-    {
-        c = c * (-1);
-        return c;
-    }
-
-    if (c >= 0)
-    {
-        return c;
-    }
+    int r;
+    r = _abs(-1);
+    printf("%d\n", r);
+    r = _abs(0);
+    printf("%d\n", r);
+    r = _abs(1);
+    printf("%d\n", r);
+    r = _abs(-98);
+    printf("%d\n", r);
+    return (0);
 
 }

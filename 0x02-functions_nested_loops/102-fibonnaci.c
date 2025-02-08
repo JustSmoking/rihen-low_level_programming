@@ -1,11 +1,12 @@
 #include "main.h"
+#include <stdio.h>
 
-
-int main()
+long fibonnaci(int n)
 {
-    for (int i = 1; i < 51; i++)
-    {
-        printf(" F(%d) = %ld ", i,fibonnaci(i));
-    }
-    
+    if (n == 0)
+        return 0;
+    else if (n == 1)
+        return 1;
+    else
+        return fibonnaci(n - 1) + fibonnaci(n - 2);
 }

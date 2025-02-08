@@ -1,8 +1,10 @@
-#include "main.h"
 #include <stdio.h>
+#include "main.h"
 
-int add(int a, int b)
+
+int main()
 {
-    return a + b;
+    int n = add(89, 9);
+    printf("%d", n);
+    return(0);
 }
-

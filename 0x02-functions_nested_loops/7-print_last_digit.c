@@ -1,14 +1,16 @@
 #include "main.h"
+#include <stdio.h>
 
-
-int main()
+int print_last_digit(int c)
 {
-    int r;
-    print_last_digit(98);
-    print_last_digit(0);
-    r = print_last_digit(-1024);
-    putchar('0' + r);
-    putchar('\n');
-    return (0);
+    int k = _abs(c % 10);
+    if (c == 0)
+    {
+        putchar(c + '0');
+        return 0;
+    }
 
+    putchar(k + '0');
+    return k;
+    
 }

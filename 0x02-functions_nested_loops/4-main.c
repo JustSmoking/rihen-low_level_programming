@@ -1,11 +1,17 @@
 #include "main.h"
-#include <stdio.h>
 
-int _isalpha(int c)
+
+int main()
 {
-    if (c >= 65 && c < 123)
-    {
-        return 1;
-    }
-    return 0;
+    int r;
+    r = _isalpha('H');
+    putchar(r + '0');
+    r = _isalpha('o');
+    putchar(r + '0');
+    r = _isalpha(108);
+    putchar(r + '0');
+    r = _isalpha(';');
+    putchar(r + '0');
+    putchar('\n');
+    return (0);
 }
